@@ -6,7 +6,7 @@
 /*   By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 15:10:27 by sharrach          #+#    #+#             */
-/*   Updated: 2022/04/22 03:03:28 by sharrach         ###   ########.fr       */
+/*   Updated: 2022/05/13 17:51:39 by sharrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 #include <stdlib.h>
 #include "libft/libft.h"
 
-typedef struct s_stacks{
+typedef struct s_stack{
     int *stack_a;
     int *stack_b;
-}   t_stacks;
+}   t_stack;
 
 #endif
