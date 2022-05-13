@@ -6,13 +6,13 @@
 /*   By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 15:10:24 by sharrach          #+#    #+#             */
-/*   Updated: 2022/04/17 15:31:16 by sharrach         ###   ########.fr       */
+/*   Updated: 2022/04/23 23:59:51 by sharrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int main(void)
+int main(int argc, char **argv)
 {
 	printf("salah");
 	return (0);
