@@ -6,7 +6,7 @@
 #    By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/17 15:24:20 by sharrach          #+#    #+#              #
-#    Updated: 2022/04/17 18:34:13 by sharrach         ###   ########.fr        #
+#    Updated: 2022/05/18 10:21:54 by sharrach         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,7 @@ SRCS	=	swap_a.c\
 			reverse_rotate_a.c\
 			reverse_rotate_b.c\
 			rra_rrb.c\
+			get_args.c\
 			push_swap.c
 
 OBJS	=	$(SRCS:.c=.o)
