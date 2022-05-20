@@ -6,13 +6,13 @@
 /*   By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 11:00:41 by sharrach          #+#    #+#             */
-/*   Updated: 2022/05/18 10:21:53 by sharrach         ###   ########.fr       */
+/*   Updated: 2022/05/20 12:16:32 by sharrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static	int	isdup(t_stack *stacks, long long num, int ref)
+static	int	check_duplicate(t_stack *stacks, long long num, int ref)
 {
 	int	i;
 
@@ -28,7 +28,7 @@ static	int	isdup(t_stack *stacks, long long num, int ref)
 
 static	int	check_error(t_stack *stacks, long long num, int ref)
 {
-	if (num == -1 || !isdup(stacks, num, ref)
+	if (num == -1 || !check_duplicate(stacks, num, ref)
 		|| num > 2147483647 || num < -2147483648)
 	{
 		write(2, "Error\n", 6);

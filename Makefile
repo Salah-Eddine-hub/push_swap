@@ -6,7 +6,7 @@
 #    By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/17 15:24:20 by sharrach          #+#    #+#              #
-#    Updated: 2022/05/18 10:21:54 by sharrach         ###   ########.fr        #
+#    Updated: 2022/05/20 12:35:06 by sharrach         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ CFLAGS	=	-Wall -Wextra -Werror
 RM		=	rm -f
 
 $(NAME)	:	$(OBJS) $(HEADER)
-			make -c libft
+			Make -C libft
 			$(CC) $(CFLAGS) $(OBJS) libft/libft.a -o $(NAME)
 
 all		:	$(NAME)

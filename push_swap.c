@@ -6,7 +6,7 @@
 /*   By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 15:10:24 by sharrach          #+#    #+#             */
-/*   Updated: 2022/05/19 15:19:17 by sharrach         ###   ########.fr       */
+/*   Updated: 2022/05/20 12:34:45 by sharrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,3 @@ int main(int argc, char **argv)
 	if (!get_args(argc, argv, &stacks, &top_a))
 		return (0);
 }
-
