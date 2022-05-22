@@ -6,13 +6,13 @@
 /*   By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 11:00:41 by sharrach          #+#    #+#             */
-/*   Updated: 2022/05/20 12:16:32 by sharrach         ###   ########.fr       */
+/*   Updated: 2022/05/22 18:31:04 by sharrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static	int	check_duplicate(t_stack *stacks, long long num, int ref)
+static	int	check_duplicate(t_stack *stacks, long num, int ref)
 {
 	int	i;
 
@@ -26,35 +26,35 @@ static	int	check_duplicate(t_stack *stacks, long long num, int ref)
 	return (0);
 }
 
-static	int	check_error(t_stack *stacks, long long num, int ref)
+static	int	check_error(t_stack *stacks, long num, int ref)
 {
-	if (num == -1 || !check_duplicate(stacks, num, ref)
-		|| num > 2147483647 || num < -2147483648)
+	if (!check_duplicate(stacks, num, ref)
+		|| num > INT_MAX || num < INT_MIN)
 	{
-		write(2, "Error\n", 6);
-		free(stacks->stack_a);
-		free(stacks->stack_b);
+		free_program(stacks);
 		return (1);
 	}
 	return (0);
 }
 
-int	get_args(int argc, char **argv, t_stack *stacks, int *top_a)
+int	get_args(int argc, char **argv, t_stack *stacks)
 {
-	long long	num;
-	int			i;
+	long	num;
+	int		i;
 
-	*top_a = argc - 2;
+	stacks->top_a = argc - 2;
 	stacks->stack_a = ft_calloc (sizeof(int), (argc - 1));
-	stacks->stack_b = ft_calloc (sizeof(int), (argc - 1));
+	stacks->stack_b = ft_calloc (sizeof(int), 1);
 	argc--;
 	i = 0;
-	while (i <= *top_a)
+	while (i <= stacks->top_a)
 	{
-		num = ft_atoi(argv[argc--]);
+		if (argv[argc][0] == '\0' || !ft_satoi(argv[argc], &num))
+			return (0);
 		if (check_error(stacks, num, i))
 			return (0);
 		stacks->stack_a[i++] = num;
+		argc--;
 	}
 	return (1);
 }
