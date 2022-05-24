@@ -6,34 +6,50 @@
 /*   By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 11:00:41 by sharrach          #+#    #+#             */
-/*   Updated: 2022/05/22 18:31:04 by sharrach         ###   ########.fr       */
+/*   Updated: 2022/05/24 18:33:56 by sharrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static	int	check_duplicate(t_stack *stacks, long num, int ref)
+static char	**split_args(int argc, char **argv)
+{
+	int		i;
+	char	*str;
+	char	**arr;
+
+	str = ft_strdup("");
+	i = 1;
+	while(i < argc)
+	{
+		str = ft_stradd(str, argv[i]);
+		str = ft_stradd(str, " ");
+		i ++;
+	}
+	arr = ft_split(str, ' ');
+	free(str);
+	return (arr);
+}
+
+static	int	check_duplicate(t_stack *stacks, long num, int ret)
 {
 	int	i;
 
-	i = 0;
-	if (ref == 0)
+	if (ret == 0)
 		return (1);
-	while (stacks->stack_a[i] != num && i < ref)
+	i = 0;
+	while (stacks->stack_a[i] != num && i < ret)
 		i++;
-	if (i == ref)
+	if (i == ret)
 		return (1);
 	return (0);
 }
 
-static	int	check_error(t_stack *stacks, long num, int ref)
+static	int	check_error(t_stack *stacks, long num, int ret)
 {
-	if (!check_duplicate(stacks, num, ref)
+	if (!check_duplicate(stacks, num, ret)
 		|| num > INT_MAX || num < INT_MIN)
-	{
-		free_program(stacks);
 		return (1);
-	}
 	return (0);
 }
 
@@ -41,20 +57,23 @@ int	get_args(int argc, char **argv, t_stack *stacks)
 {
 	long	num;
 	int		i;
+	char	**arr;
 
-	stacks->top_a = argc - 2;
-	stacks->stack_a = ft_calloc (sizeof(int), (argc - 1));
-	stacks->stack_b = ft_calloc (sizeof(int), 1);
-	argc--;
+	arr = split_args(argc, argv);
+	stacks->top_a = arr_len(arr) - 1;
+	stacks->stack_a = ft_calloc (sizeof(int), arr_len(arr));
+	stacks->top_b = -1;
+	stacks->stack_b = ft_calloc (sizeof(int), arr_len(arr));
+	argc -= 2;
 	i = 0;
 	while (i <= stacks->top_a)
 	{
-		if (argv[argc][0] == '\0' || !ft_satoi(argv[argc], &num))
-			return (0);
+		if (arr[argc][0] == '\0' || !ft_satoi(arr[argc], &num))
+			return (free_program(stacks), 0);
 		if (check_error(stacks, num, i))
-			return (0);
+			return (free_program(stacks), 0);
 		stacks->stack_a[i++] = num;
-		argc--;
+		argc --;
 	}
 	return (1);
 }

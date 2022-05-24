@@ -6,7 +6,7 @@
 #    By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/17 15:24:20 by sharrach          #+#    #+#              #
-#    Updated: 2022/05/22 12:31:16 by sharrach         ###   ########.fr        #
+#    Updated: 2022/05/24 16:05:06 by sharrach         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,11 @@ NAME	=	push_swap
 
 HEADER	=	push_swap.h
 
-SRCS	=	ft_satoi.c\
+SRCS	=	sort_three.c\
+			sort_five.c\
+			ft_satoi.c\
+			ft_stradd.c\
+			arr_len.c\
 			swap_a.c\
 			swap_b.c\
 			sa_sb.c\

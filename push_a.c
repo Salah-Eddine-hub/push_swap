@@ -6,17 +6,17 @@
 /*   By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 18:34:22 by sharrach          #+#    #+#             */
-/*   Updated: 2022/05/20 12:20:31 by sharrach         ###   ########.fr       */
+/*   Updated: 2022/05/24 18:37:21 by sharrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
- void	push_a(t_stack *stacks, int *top_a, int *top_b)
+void	push_a(t_stack *stacks)
 {
-	if(stacks->stack_b == 0)
+	if(stacks->top_b < 0)
 		return ;
-	(*top_a)++;
-	stacks->stack_a[*top_a] = stacks->stack_b[*top_b];
-	(*top_b)--;
+	(stacks->top_a)++;
+	stacks->stack_a[stacks->top_a] = stacks->stack_b[stacks->top_b];
+	(stacks->top_b)--;
 }

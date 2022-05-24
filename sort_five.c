@@ -1,19 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sa_sb.c                                            :+:      :+:    :+:   */
+/*   sort_five.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/17 18:35:15 by sharrach          #+#    #+#             */
-/*   Updated: 2022/05/24 13:58:12 by sharrach         ###   ########.fr       */
+/*   Created: 2022/05/24 15:45:40 by sharrach          #+#    #+#             */
+/*   Updated: 2022/05/24 18:33:56 by sharrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sa_sb(t_stack *stacks)
+void    sort_five(t_stack *stacks)
 {
-	swap_a(stacks);
-	swap_b(stacks);
+	push_b(stacks);
+	push_b(stacks);
+	sort_three(stacks);
+	if (stacks->stack_b[0] > stacks->stack_b[1])
+		swap_b(stacks);
+	push_a(stacks);
+	push_a(stacks);
+	for (int i = stacks->top_a; i >= 0; i--)
+		printf("a[%d] = %d\n", i, stacks->stack_a[i]);
+
 }

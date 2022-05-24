@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sa_sb.c                                            :+:      :+:    :+:   */
+/*   arr_len.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/17 18:35:15 by sharrach          #+#    #+#             */
-/*   Updated: 2022/05/24 13:58:12 by sharrach         ###   ########.fr       */
+/*   Created: 2022/05/23 10:43:55 by sharrach          #+#    #+#             */
+/*   Updated: 2022/05/23 10:45:47 by sharrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sa_sb(t_stack *stacks)
+int	arr_len(char **arr)
 {
-	swap_a(stacks);
-	swap_b(stacks);
+	int i;
+
+	i = 0;
+	while (arr[i])
+		i ++;
+	return (i);
 }

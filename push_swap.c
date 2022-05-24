@@ -6,52 +6,24 @@
 /*   By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 15:10:24 by sharrach          #+#    #+#             */
-/*   Updated: 2022/05/22 18:43:00 by sharrach         ###   ########.fr       */
+/*   Updated: 2022/05/24 19:00:41 by sharrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	ft_free_arr(char **arr)
+static void	print_stacks(t_stack *stacks)
 {
-	int i = -1;
-	while (arr[++i])
-		free(arr[i]);
-	free(arr);
-	return ;
-}
-
-int	quote_check(int argc, char **argv, t_stack *stacks)
-{
-	int i = 0;
-	int j = 0;
-	char	**av;
-
-	while (argv[++i])
-	{
-		while (argc--)
-		{
-			av = ft_split(argv[i], ' ');
-			while (av[j++]);
-			ft_free_arr(av);
-		}
-		stacks->stack_a = malloc(sizeof(int) * j);
-		j = 0;
-		while (av[j])
-		{
-			stacks->stack_a[j] = ft_atoi(av[j]);
-			j++;
-		}
-		ft_free_arr(av);
-		break;
+	printf("Stack A:\n");
+	int i = stacks->top_a;
+	while (i >= 0) {
+		printf("%d\n", stacks->stack_a[i--]);
 	}
-	i = 0;
-	while (i < j)
-	{
-		printf("%d ", stacks->stack_a[i]);
-		i++;
+	printf("Stack B:\n");
+	i = stacks->top_b;
+	while (i >= 0) {
+		printf("%d\n", stacks->stack_b[i--]);
 	}
-	return (1);
 }
 
 int main(int argc, char **argv)
@@ -61,9 +33,12 @@ int main(int argc, char **argv)
 	stacks.top_a = 0;
 	stacks.top_b = 0;
 	if (argc == 1)
-		return (1);
-	// quote_check(argc, argv, &stacks);
+		return (EXIT_FAILURE);
 	if (!get_args(argc, argv, &stacks))
-		return (ft_putendl_fd("Error\nInvalid arguments", 1), 1);
-	return (0);
+		return (ft_putendl_fd("Error\nInvalid arguments.", 1), 1);
+	// print_stacks(&stacks);
+	// push_b(&stacks);
+	// sort_three(&stacks);
+	// sort_five(&stacks);
+	return (EXIT_SUCCESS);
 }

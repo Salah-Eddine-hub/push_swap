@@ -1,19 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sa_sb.c                                            :+:      :+:    :+:   */
+/*   free2d.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/17 18:35:15 by sharrach          #+#    #+#             */
-/*   Updated: 2022/05/24 13:58:12 by sharrach         ###   ########.fr       */
+/*   Created: 2022/04/12 22:51:48 by sharrach          #+#    #+#             */
+/*   Updated: 2022/04/15 13:53:14 by sharrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-void	sa_sb(t_stack *stacks)
+void	*free2d(char **arr)
 {
-	swap_a(stacks);
-	swap_b(stacks);
+	int	i;
+
+	i = 0;
+	while (arr[i])
+	{
+		free(arr[i]);
+		i++;
+	}
+	free (arr);
+	return (NULL);
 }
