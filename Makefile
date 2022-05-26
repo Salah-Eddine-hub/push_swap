@@ -6,7 +6,7 @@
 #    By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/17 15:24:20 by sharrach          #+#    #+#              #
-#    Updated: 2022/05/24 16:05:06 by sharrach         ###   ########.fr        #
+#    Updated: 2022/05/25 09:49:56 by sharrach         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,22 +14,22 @@ NAME	=	push_swap
 
 HEADER	=	push_swap.h
 
-SRCS	=	sort_three.c\
+SRCS	=	instraction/swap_a.c\
+			instraction/swap_b.c\
+			instraction/sa_sb.c\
+			instraction/push_a.c\
+			instraction/push_b.c\
+			instraction/rotate_a.c\
+			instraction/rotate_b.c\
+			instraction/ra_rb.c\
+			instraction/reverse_rotate_a.c\
+			instraction/reverse_rotate_b.c\
+			instraction/rra_rrb.c\
+			sort_three.c\
 			sort_five.c\
 			ft_satoi.c\
 			ft_stradd.c\
 			arr_len.c\
-			swap_a.c\
-			swap_b.c\
-			sa_sb.c\
-			push_a.c\
-			push_b.c\
-			rotate_a.c\
-			rotate_b.c\
-			ra_rb.c\
-			reverse_rotate_a.c\
-			reverse_rotate_b.c\
-			rra_rrb.c\
 			get_args.c\
 			free_program.c\
 			push_swap.c

@@ -1,20 +1,20 @@
-
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rra_rrb.c                                          :+:      :+:    :+:   */
+/*   sa_sb.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/17 18:35:12 by sharrach          #+#    #+#             */
-/*   Updated: 2022/05/20 15:53:39 by sharrach         ###   ########.fr       */
+/*   Created: 2022/04/17 18:35:15 by sharrach          #+#    #+#             */
+/*   Updated: 2022/05/25 09:59:35 by sharrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-void    rra_rrb(t_stack *stacks)
+void	sa_sb(t_stack *stacks)
 {
-	reverse_rotate_a(stacks);
-	reverse_rotate_b(stacks);
+	swap_a(stacks);
+	swap_b(stacks);
+	printf("sa_sb\n");
 }

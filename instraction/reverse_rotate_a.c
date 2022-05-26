@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap_a.c                                           :+:      :+:    :+:   */
+/*   reverse_rotate_a.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/17 18:35:19 by sharrach          #+#    #+#             */
-/*   Updated: 2022/05/24 18:38:17 by sharrach         ###   ########.fr       */
+/*   Created: 2022/04/17 18:34:39 by sharrach          #+#    #+#             */
+/*   Updated: 2022/05/25 09:59:51 by sharrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-void	swap_a(t_stack *stacks)
+void	reverse_rotate_a(t_stack *stacks)
 {
-	int	tmp;
-	
+	int tmp;
+	int i;
+
 	if (stacks->top_a < 1)
 		return ;
-	tmp = stacks->stack_a[stacks->top_a - 1];
-	stacks->stack_a[stacks->top_a - 1] = stacks->stack_a[stacks->top_a];
-	stacks->stack_a[stacks->top_a] = tmp;
+	tmp = stacks->stack_a[0];
+	i = 0;
+	while (i < stacks->top_a)
+	{
+		stacks->stack_a[i] = stacks->stack_a[i + 1];
+		i ++;
+	}
+	stacks->stack_a[i] = tmp;
+	printf("rra\n");
 }

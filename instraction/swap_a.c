@@ -1,19 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sa_sb.c                                            :+:      :+:    :+:   */
+/*   swap_a.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/17 18:35:15 by sharrach          #+#    #+#             */
-/*   Updated: 2022/05/24 13:58:12 by sharrach         ###   ########.fr       */
+/*   Created: 2022/04/17 18:35:19 by sharrach          #+#    #+#             */
+/*   Updated: 2022/05/25 09:59:32 by sharrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-void	sa_sb(t_stack *stacks)
+void	swap_a(t_stack *stacks)
 {
-	swap_a(stacks);
-	swap_b(stacks);
+	int	tmp;
+	
+	if (stacks->top_a < 1)
+		return ;
+	tmp = stacks->stack_a[stacks->top_a - 1];
+	stacks->stack_a[stacks->top_a - 1] = stacks->stack_a[stacks->top_a];
+	stacks->stack_a[stacks->top_a] = tmp;
+	printf("sa\n");
 }
