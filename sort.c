@@ -6,11 +6,11 @@
 /*   By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 16:09:00 by sharrach          #+#    #+#             */
-/*   Updated: 2022/05/26 17:32:17 by sharrach         ###   ########.fr       */
+/*   Updated: 2022/05/29 19:35:21 by sharrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<push_swap.h>
+#include"push_swap.h"
 
 static	void swap(int* xp, int* yp)
 {
@@ -19,7 +19,7 @@ static	void swap(int* xp, int* yp)
     *yp = temp;
 }
  
-static	void bubbleSort(int arr[], int n)
+static	void bubblesort(int arr[], int n)
 {
     int	i;
 	int	j;
@@ -38,18 +38,38 @@ static	void bubbleSort(int arr[], int n)
 	}
 }
 
-
-
-void    new_stack(t_stack *stacks)
+void    sort_stacks(t_stacks *stacks)
 {
 	int i;
-	int	**stack_x;
+	int j;
+	int pv1;
+	int pv2;
+	int n;
 	
-	stack_x = ft_calloc(sizeof (int), stacks->top_a + 1);
-	
-	while(stacks->stack_a[i])
+	n = 0;
+	stacks->stack_x = ft_calloc(sizeof (int), stacks->a.top + 1);
+	i = 0;
+	while(stacks->a.stack[i])
 	{
-		**stack_x = stacks->stack_a[i];
+		stacks->stack_x[i] = stacks->a.stack[i];
 		i ++;
 	}
+	bubblesort(stacks->stack_x, n);
+	pv1 = stacks->a.stack[i] / 3;
+	pv2 = pv1 / 2;
+	j = 0;
+	while(stacks->a.stack[j] != 1)
+	{
+		if(stacks->a.top <= pv1)
+		{
+			push_b(stacks);
+			j ++;
+		}
+		if(stacks->b.top <= pv2)
+			rotate_b(stacks);
+		else
+			rotate_a(stacks);
+		j ++;
+	}
+	
 }

@@ -6,13 +6,13 @@
 /*   By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 18:34:36 by sharrach          #+#    #+#             */
-/*   Updated: 2022/05/25 09:59:53 by sharrach         ###   ########.fr       */
+/*   Updated: 2022/05/29 19:35:21 by sharrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void    ra_rb(t_stack *stacks)
+void    ra_rb(t_stacks *stacks)
 {
     rotate_a(stacks);
     rotate_b(stacks);

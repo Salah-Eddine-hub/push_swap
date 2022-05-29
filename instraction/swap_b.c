@@ -6,20 +6,20 @@
 /*   By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 18:35:22 by sharrach          #+#    #+#             */
-/*   Updated: 2022/05/25 09:59:17 by sharrach         ###   ########.fr       */
+/*   Updated: 2022/05/29 19:35:21 by sharrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	swap_b(t_stack *stacks)
+void	swap_b(t_stacks *stacks)
 {
 	int	tmp;
 	
-	if (stacks->top_b < 1)
+	if (stacks->b.top < 1)
 		return ;
-	tmp = stacks->stack_b[stacks->top_b - 1];
-	stacks->stack_b[stacks->top_b - 1] = stacks->stack_b[stacks->top_b];
-	stacks->stack_b[stacks->top_b] = tmp;
+	tmp = stacks->b.stack[stacks->b.top - 1];
+	stacks->b.stack[stacks->b.top - 1] = stacks->b.stack[stacks->b.top];
+	stacks->b.stack[stacks->b.top] = tmp;
 	printf("sb\n");
 }

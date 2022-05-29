@@ -6,26 +6,26 @@
 /*   By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 18:34:48 by sharrach          #+#    #+#             */
-/*   Updated: 2022/05/25 09:59:42 by sharrach         ###   ########.fr       */
+/*   Updated: 2022/05/29 19:35:21 by sharrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	rotate_a(t_stack *stacks)
+void	rotate_a(t_stacks *stacks)
 {
 	int	tmp;
 	int i;
 
-	if (stacks->top_a < 1)
+	if (stacks->a.top < 1)
 		return ;
-	tmp = stacks->stack_a[stacks->top_a];
-	i = stacks->top_a;
+	tmp = stacks->a.stack[stacks->a.top];
+	i = stacks->a.top;
 	while(i > 0)
 	{
-		stacks->stack_a[i] = stacks->stack_a[i - 1];
+		stacks->a.stack[i] = stacks->a.stack[i - 1];
 		i --;
 	}
-	stacks->stack_a[i] = tmp;
+	stacks->a.stack[i] = tmp;
 	printf("ra\n");
 }

@@ -6,7 +6,7 @@
 /*   By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 15:10:27 by sharrach          #+#    #+#             */
-/*   Updated: 2022/05/26 11:42:34 by sharrach         ###   ########.fr       */
+/*   Updated: 2022/05/29 19:38:39 by sharrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,29 +20,34 @@
 # include "libft/libft.h"
 
 typedef struct s_stack {
-	int	*stack_a;
-	int	top_a;
-	int	*stack_b;
-	int	top_b;
-}	t_stack;
+    int    *stack;
+    int    top;
+}    t_stack;
 
-void	swap_a(t_stack *stacks);
-void	swap_b(t_stack *stacks);
-void	sa_sb(t_stack *stacks);
-void	push_a(t_stack *stacks);
-void	push_b(t_stack *stacks);
-void	rotate_a(t_stack *stacks);
-void    rotate_b(t_stack *stacks);
-void    ra_rb(t_stack *stacks);
-void    reverse_rotate_a(t_stack *stacks);
-void    reverse_rotate_b(t_stack *stacks);
-void    rra_rrb(t_stack *stacks);
-void	sort_three(t_stack *stacks);
-void    sort_five(t_stack *stacks);
+typedef struct s_stacks {
+    t_stack    a;
+    t_stack    b;
+}    t_stacks;
+
+void	swap_a(t_stacks *stacks);
+void	swap_b(t_stacks *stacks);
+void	sa_sb(t_stacks *stacks);
+void	push_a(t_stacks *stacks);
+void	push_b(t_stacks *stacks);
+void	rotate_a(t_stacks *stacks);
+void    rotate_b(t_stacks *stacks);
+void    ra_rb(t_stacks *stacks);
+void    reverse_rotate_a(t_stacks *stacks);
+int		find_key_nbr(int *tab, int size);
+void    reverse_rotate_b(t_stacks *stacks);
+void    rra_rrb(t_stacks *stacks);
+// void    sort_stacks(t_stacks *stacks);
+void	sort_three(t_stacks *stacks);
+void    sort_five(t_stacks *stacks);
 int		ft_satoi(const char *str, long *nb);
 char	*ft_stradd(char const *s1, char const *s2);
 int		arr_len(char **arr);
-void	free_program(t_stack *stacks);
-int		get_args(int argc, char **argv, t_stack *stacks);
+void	free_program(t_stacks *stacks);
+int		get_args(int argc, char **argv, t_stacks *stacks);
 
 #endif

@@ -6,49 +6,49 @@
 /*   By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 15:45:40 by sharrach          #+#    #+#             */
-/*   Updated: 2022/05/26 13:18:27 by sharrach         ###   ########.fr       */
+/*   Updated: 2022/05/29 19:35:21 by sharrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static	int	find_the_smallest(t_stack *stacks)
+static	int	find_the_smallest(t_stacks *stacks)
 {
 	int i;
 	int j;
 	int num;
 
-	i = stacks->top_a;
+	i = stacks->a.top;
 	while (i >= 0)
 	{
-		num = stacks->stack_a[i];
-		j = stacks->top_a;
+		num = stacks->a.stack[i];
+		j = stacks->a.top;
 		while (j >= 0)
 		{
-			if (stacks->stack_a[j] < num)
-				num = stacks->stack_a[j];
+			if (stacks->a.stack[j] < num)
+				num = stacks->a.stack[j];
 			j--;	
 		}
 		i--;
 	}
 	return (num);
 }
-static	int	find_index_of_smallest(t_stack *stacks)
+static	int	find_index_of_smallest(t_stacks *stacks)
 {
 	int j;
 	int num;
 
 	num = find_the_smallest(stacks);
-	j = stacks->top_a;
+	j = stacks->a.top;
 	while (j >= 0)
 	{
-		if (stacks->stack_a[j] == num)
+		if (stacks->a.stack[j] == num)
 			return (j);
 		j--;
 	}
-	return (stacks->top_a);
+	return (stacks->a.top);
 }
-void    sort_five(t_stack *stacks)
+void    sort_five(t_stacks *stacks)
 {
 	int i;
 	int j;
@@ -60,15 +60,15 @@ void    sort_five(t_stack *stacks)
 	while (j < 2)
 	{
 		index = find_index_of_smallest(stacks);
-		if (index > stacks->top_a / 2)
+		if (index > stacks->a.top / 2)
 		{
-			while (index < stacks->top_a)
+			while (index < stacks->a.top)
 			{
 				rotate_a(stacks);			
 				index++;	
 			}
 		}
-		else if (index <= stacks->top_a / 2)
+		else if (index <= stacks->a.top / 2)
 		{
 			while (index >= 0)
 			{
@@ -82,15 +82,15 @@ void    sort_five(t_stack *stacks)
 	}
 	
 	printf("----------------------------\n");
-	for (i = stacks->top_b; i >= 0; i--)
-		printf("b[%d] = %d\n", i, stacks->stack_b[i]);
+	for (i = stacks->b.top; i >= 0; i--)
+		printf("b[%d] = %d\n", i, stacks->b.stack[i]);
 		
 	sort_three(stacks);
 	push_a(stacks);
 	push_a(stacks);
 		
 	printf("----------------------------\n");
-	for (i = stacks->top_a; i >= 0; i--)
-		printf("a[%d] = %d\n", i, stacks->stack_a[i]);
+	for (i = stacks->a.top; i >= 0; i--)
+		printf("a[%d] = %d\n", i, stacks->a.stack[i]);
 	
 }

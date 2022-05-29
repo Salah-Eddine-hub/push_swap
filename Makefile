@@ -6,7 +6,7 @@
 #    By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/17 15:24:20 by sharrach          #+#    #+#              #
-#    Updated: 2022/05/25 09:49:56 by sharrach         ###   ########.fr        #
+#    Updated: 2022/05/29 19:41:22 by sharrach         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,7 +54,7 @@ clean	:
 
 fclean	: clean
 				make fclean -C libft
-				$(RM) $(NAME)
+				$(RM) $(NAME) $(OBJS)
 
 re		:	fclean all
 

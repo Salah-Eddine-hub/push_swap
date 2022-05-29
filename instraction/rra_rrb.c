@@ -13,7 +13,7 @@
 
 #include "../push_swap.h"
 
-void    rra_rrb(t_stack *stacks)
+void    rra_rrb(t_stacks *stacks)
 {
 	reverse_rotate_a(stacks);
 	reverse_rotate_b(stacks);
