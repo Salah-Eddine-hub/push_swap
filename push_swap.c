@@ -6,13 +6,13 @@
 /*   By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 15:10:24 by sharrach          #+#    #+#             */
-/*   Updated: 2022/05/29 19:41:48 by sharrach         ###   ########.fr       */
+/*   Updated: 2022/05/31 17:35:02 by sharrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// static void	print_stackss(t_stacks *stacks)
+// static void	print_stacks(t_stacks *stacks)
 // {
 // 	printf("Stack A:\n");
 // 	int i = stacks->a.top;
@@ -26,8 +26,6 @@
 // 	}
 // }
 
-
-
 int main(int argc, char **argv)
 {
 	t_stacks	stacks;
@@ -38,12 +36,11 @@ int main(int argc, char **argv)
 		return (EXIT_FAILURE);
 	if (!get_args(argc, argv, &stacks))
 		return (ft_putendl_fd("Error\nInvalid arguments.", 1), 1);
-	// sort_stacks(&stacks);
 	// printf("%d\n", stacks.stack_a[1]);
 	// printf("%d\n", find_key_nbr(stacks.stack_x, stacks.top_a));
-	// print_stackss(&stacks);
-	// push_a(&stacks);
-	// sort_three(&stacks);
-	// sort_five(&stacks);
+	// print_stacks(&stacks);
+	sort_stacks(&stacks);
+	// move_a_to_b(&stacks);
+	// print_stacks(&stacks);
 	return (EXIT_SUCCESS);
 }
