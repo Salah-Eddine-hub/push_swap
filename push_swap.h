@@ -6,7 +6,7 @@
 /*   By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 15:10:27 by sharrach          #+#    #+#             */
-/*   Updated: 2022/05/31 17:07:32 by sharrach         ###   ########.fr       */
+/*   Updated: 2022/06/02 18:06:10 by sharrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,16 @@ typedef struct s_stacks {
     t_stack    b;
 }    t_stacks;
 
+typedef struct vars{
+    int i;
+    int j;
+    int pv1;
+    int pv2;
+    int vp1;
+    int vp2;
+    int lvp2;
+}   t_func;
+
 void	swap_a(t_stacks *stacks);
 void	swap_b(t_stacks *stacks);
 void	sa_sb(t_stacks *stacks);
@@ -38,15 +48,18 @@ void	rotate_a(t_stacks *stacks);
 void    rotate_b(t_stacks *stacks);
 void    ra_rb(t_stacks *stacks);
 void    reverse_rotate_a(t_stacks *stacks);
-int		find_key_nbr(int *tab, int size);
 void    reverse_rotate_b(t_stacks *stacks);
 void    rra_rrb(t_stacks *stacks);
-void    sort_stacks(t_stacks *stacks);
+
+int		find_key_nbr(int *tab, int size);
+
+int		ft_satoi(const char *str, long *nb);
 void	sort_three(t_stacks *stacks);
 void    sort_five(t_stacks *stacks);
-int		ft_satoi(const char *str, long *nb);
+void    sort_stacks(t_stacks *stacks);
 char	*ft_stradd(char const *s1, char const *s2);
 int		arr_len(char **arr);
+void    bubblesort(int *arr, int n);
 void	free_program(t_stacks *stacks);
 
 int     *get_head_comp(t_stack stack);

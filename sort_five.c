@@ -6,7 +6,7 @@
 /*   By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 15:45:40 by sharrach          #+#    #+#             */
-/*   Updated: 2022/05/29 19:35:21 by sharrach         ###   ########.fr       */
+/*   Updated: 2022/06/02 20:12:53 by sharrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ static	int	find_the_smallest(t_stacks *stacks)
 	}
 	return (num);
 }
+
 static	int	find_index_of_smallest(t_stacks *stacks)
 {
 	int j;
@@ -48,14 +49,12 @@ static	int	find_index_of_smallest(t_stacks *stacks)
 	}
 	return (stacks->a.top);
 }
+
 void    sort_five(t_stacks *stacks)
 {
-	int i;
 	int j;
 	int index;
 	
-	// printf("small number is: %d\n",find_the_smallest(stacks));
-	// printf("it index is: %d\n",find_index_of_smallest(stacks));
 	j = 0;	
 	while (j < 2)
 	{
@@ -75,22 +74,11 @@ void    sort_five(t_stacks *stacks)
 				reverse_rotate_a(stacks);
 				index--;
 			}
-			
 		}
 		push_b(stacks);
 		j++;
-	}
-	
-	printf("----------------------------\n");
-	for (i = stacks->b.top; i >= 0; i--)
-		printf("b[%d] = %d\n", i, stacks->b.stack[i]);
-		
+	}	
 	sort_three(stacks);
 	push_a(stacks);
 	push_a(stacks);
-		
-	printf("----------------------------\n");
-	for (i = stacks->a.top; i >= 0; i--)
-		printf("a[%d] = %d\n", i, stacks->a.stack[i]);
-	
 }

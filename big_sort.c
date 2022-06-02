@@ -6,7 +6,7 @@
 /*   By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 13:48:55 by sharrach          #+#    #+#             */
-/*   Updated: 2022/05/31 10:04:02 by sharrach         ###   ########.fr       */
+/*   Updated: 2022/06/01 12:37:02 by sharrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,19 +28,19 @@ static int	get_big_index(int *tab, int size)
 	return (big);
 }
 
-static	int 	nb_index(t_stack stacks, int nb)
-{
-	int index;
+// static	int 	nb_index(t_stack stacks, int nb)
+// {
+// 	int index;
 	
-	index = stacks.top;
-	while(index >= 0)
-	{
-		if (stacks.stack[index] == nb)
-			return (index);
-		index --;	
-	}
-	return (-1);
-}
+// 	index = stacks.top;
+// 	while(index >= 0)
+// 	{
+// 		if (stacks.stack[index] == nb)
+// 			return (index);
+// 		index --;	
+// 	}
+// 	return (-1);
+// }
 
 int	get_head_index(t_stack stack)
 {

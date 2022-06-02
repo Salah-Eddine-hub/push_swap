@@ -1,35 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   count_inst.c                                       :+:      :+:    :+:   */
+/*   bubble_sort.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/31 10:07:32 by sharrach          #+#    #+#             */
-/*   Updated: 2022/06/02 14:50:13 by sharrach         ###   ########.fr       */
+/*   Created: 2022/06/02 18:05:29 by sharrach          #+#    #+#             */
+/*   Updated: 2022/06/02 18:05:55 by sharrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int    count_move(t_stack stack)
+static	void swap(int* xp, int* yp)
 {
-	int	*count;
-	int i;
-	int j;
+    int temp = *xp;
+    *xp = *yp;
+    *yp = temp;
+}
+ 
+void bubblesort(int *arr, int n)
+{
+    int	i;
+	int	j;
 
-	count = ft_calloc (stack.top + 1, sizeof(int));
-	if (!count)
-		return (NULL);
 	i = 0;
-	j = stack.top / 2;
-	while(i <= stack.top)
+    while (i < n - 1)
 	{
-		if(i >= j)
-			count[i] = stack.top - i;
-		else if(i < j)
-			count[i] = i + 1;
+		j = 0;
+        while (j < n - i - 1)
+		{
+            if (arr[j] > arr[j + 1])
+                swap(&arr[j], &arr[j + 1]);
+			j ++;
+		}
 		i ++;
 	}
-	return(count);
 }

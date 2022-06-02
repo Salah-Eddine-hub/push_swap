@@ -6,7 +6,7 @@
 #    By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/17 15:24:20 by sharrach          #+#    #+#              #
-#    Updated: 2022/05/31 17:08:08 by sharrach         ###   ########.fr        #
+#    Updated: 2022/06/02 18:06:46 by sharrach         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +35,7 @@ SRCS	=	instraction/swap_a.c\
 			big_sort.c\
 			sort.c\
 			free_program.c\
+			bubble_sort.c\
 			nb_index.c\
 			push_swap.c
 
