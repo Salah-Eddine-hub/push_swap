@@ -6,7 +6,7 @@
 /*   By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 18:34:27 by sharrach          #+#    #+#             */
-/*   Updated: 2022/05/29 19:36:16 by sharrach         ###   ########.fr       */
+/*   Updated: 2022/06/03 16:51:49 by sharrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@ void	push_b(t_stacks *stacks)
 	(stacks->b.top)++;
 	stacks->b.stack[stacks->b.top] = stacks->a.stack[stacks->a.top];
 	(stacks->a.top)--;
-	printf("pb\n");
+	ft_putstr("pb\n");
 }

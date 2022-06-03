@@ -6,7 +6,7 @@
 /*   By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 18:35:22 by sharrach          #+#    #+#             */
-/*   Updated: 2022/05/29 19:35:21 by sharrach         ###   ########.fr       */
+/*   Updated: 2022/06/03 16:52:12 by sharrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ void	swap_b(t_stacks *stacks)
 	tmp = stacks->b.stack[stacks->b.top - 1];
 	stacks->b.stack[stacks->b.top - 1] = stacks->b.stack[stacks->b.top];
 	stacks->b.stack[stacks->b.top] = tmp;
-	printf("sb\n");
+	ft_putstr("sb\n");
 }

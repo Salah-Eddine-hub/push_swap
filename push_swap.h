@@ -6,7 +6,7 @@
 /*   By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 15:10:27 by sharrach          #+#    #+#             */
-/*   Updated: 2022/06/02 18:06:10 by sharrach         ###   ########.fr       */
+/*   Updated: 2022/06/03 17:02:09 by sharrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void    reverse_rotate_a(t_stacks *stacks);
 void    reverse_rotate_b(t_stacks *stacks);
 void    rra_rrb(t_stacks *stacks);
 
-int		find_key_nbr(int *tab, int size);
+// int		find_key_nbr(int *tab, int size);
 
 int		ft_satoi(const char *str, long *nb);
 void	sort_three(t_stacks *stacks);
@@ -61,6 +61,11 @@ char	*ft_stradd(char const *s1, char const *s2);
 int		arr_len(char **arr);
 void    bubblesort(int *arr, int n);
 void	free_program(t_stacks *stacks);
+
+int     is_sorted(t_stacks *stacks);
+int     find_the_smallest(t_stack stacks);
+int     find_index_of_smallest(t_stacks *stacks);
+void	ft_putstr(char  *str);
 
 int     *get_head_comp(t_stack stack);
 int		get_head_index(t_stack stack);

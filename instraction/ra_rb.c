@@ -6,7 +6,7 @@
 /*   By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 18:34:36 by sharrach          #+#    #+#             */
-/*   Updated: 2022/05/29 19:35:21 by sharrach         ###   ########.fr       */
+/*   Updated: 2022/06/03 16:51:51 by sharrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@ void    ra_rb(t_stacks *stacks)
 {
     rotate_a(stacks);
     rotate_b(stacks);
-    printf("ra_rb\n");
+    ft_putstr("ra_rb\n");
 }

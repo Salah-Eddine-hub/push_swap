@@ -6,7 +6,7 @@
 /*   By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 18:34:39 by sharrach          #+#    #+#             */
-/*   Updated: 2022/05/29 19:35:21 by sharrach         ###   ########.fr       */
+/*   Updated: 2022/06/03 16:51:53 by sharrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ void	reverse_rotate_a(t_stacks *stacks)
 		i ++;
 	}
 	stacks->a.stack[i] = tmp;
-	printf("rra\n");
+	ft_putstr("rra\n");
 }

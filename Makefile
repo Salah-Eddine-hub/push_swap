@@ -6,7 +6,7 @@
 #    By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/17 15:24:20 by sharrach          #+#    #+#              #
-#    Updated: 2022/06/02 18:06:46 by sharrach         ###   ########.fr        #
+#    Updated: 2022/06/03 16:56:20 by sharrach         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,10 +33,12 @@ SRCS	=	instraction/swap_a.c\
 			get_args.c\
 			move_index.c\
 			big_sort.c\
+			ft_putstr.c\
 			sort.c\
 			free_program.c\
 			bubble_sort.c\
 			nb_index.c\
+			ft_smalest_num.c\
 			push_swap.c
 
 OBJS	=	$(SRCS:.c=.o)

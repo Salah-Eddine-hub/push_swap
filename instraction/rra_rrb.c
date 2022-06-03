@@ -17,5 +17,5 @@ void    rra_rrb(t_stacks *stacks)
 {
 	reverse_rotate_a(stacks);
 	reverse_rotate_b(stacks);
-	printf("rra_rrb\n");
+	ft_putstr("rra_rrb\n");
 }
