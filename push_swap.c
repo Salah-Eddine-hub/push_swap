@@ -6,7 +6,7 @@
 /*   By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 15:10:24 by sharrach          #+#    #+#             */
-/*   Updated: 2022/06/04 14:19:04 by sharrach         ###   ########.fr       */
+/*   Updated: 2022/06/04 18:29:35 by sharrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,11 @@ void	which_sort(t_stacks *stacks)
 		sort_three(stacks);
 	else if (stacks->a.top > 2 && stacks->a.top < 5)
 		sort_five(stacks);
+	else if(stacks->a.top > 4 && stacks->a.top <= 100)
+		sort_hundred(stacks);
 	else
 		sort_stacks(stacks);
+	
 }
 
 int	main(int argc, char **argv)

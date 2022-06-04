@@ -6,7 +6,7 @@
 /*   By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 15:10:27 by sharrach          #+#    #+#             */
-/*   Updated: 2022/06/04 14:54:03 by sharrach         ###   ########.fr       */
+/*   Updated: 2022/06/04 18:26:39 by sharrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,9 @@ int		ft_satoi(const char *str, long *nb);
 int		is_sorted(t_stacks *stacks);
 void	sort_three(t_stacks *stacks);
 void	sort_five(t_stacks *stacks);
+void	sort_hundred(t_stacks *stacks);
 void	sort_stacks(t_stacks *stacks);
+void	sort_b(t_stacks *stacks, int **stack_x, t_func *var);
 char	*ft_stradd(char const *s1, char const *s2);
 int		arr_len(char **arr);
 void	bubblesort(int *arr, int n);

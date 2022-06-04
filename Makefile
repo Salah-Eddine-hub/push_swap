@@ -6,7 +6,7 @@
 #    By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/17 15:24:20 by sharrach          #+#    #+#              #
-#    Updated: 2022/06/04 12:01:22 by sharrach         ###   ########.fr        #
+#    Updated: 2022/06/04 18:30:00 by sharrach         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,7 @@ SRCS	=	instraction/swap_a.c\
 			get_args.c\
 			move_index.c\
 			ft_putstr.c\
+			sort_hundred.c\
 			sort.c\
 			ft_is_sorted.c\
 			free_program.c\
