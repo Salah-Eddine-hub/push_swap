@@ -6,7 +6,7 @@
 /*   By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 10:43:55 by sharrach          #+#    #+#             */
-/*   Updated: 2022/05/23 10:45:47 by sharrach         ###   ########.fr       */
+/*   Updated: 2022/06/04 14:11:21 by sharrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	arr_len(char **arr)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (arr[i])

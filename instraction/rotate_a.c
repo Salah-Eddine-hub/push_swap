@@ -6,7 +6,7 @@
 /*   By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 18:34:48 by sharrach          #+#    #+#             */
-/*   Updated: 2022/06/03 16:51:58 by sharrach         ###   ########.fr       */
+/*   Updated: 2022/06/04 14:22:04 by sharrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 void	rotate_a(t_stacks *stacks)
 {
 	int	tmp;
-	int i;
+	int	i;
 
 	if (stacks->a.top < 1)
 		return ;
 	tmp = stacks->a.stack[stacks->a.top];
 	i = stacks->a.top;
-	while(i > 0)
+	while (i > 0)
 	{
 		stacks->a.stack[i] = stacks->a.stack[i - 1];
 		i --;

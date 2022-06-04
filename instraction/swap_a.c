@@ -6,7 +6,7 @@
 /*   By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 18:35:19 by sharrach          #+#    #+#             */
-/*   Updated: 2022/06/03 16:52:08 by sharrach         ###   ########.fr       */
+/*   Updated: 2022/06/04 14:08:19 by sharrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	swap_a(t_stacks *stacks)
 {
 	int	tmp;
-	
+
 	if (stacks->a.top < 1)
 		return ;
 	tmp = stacks->a.stack[stacks->a.top - 1];

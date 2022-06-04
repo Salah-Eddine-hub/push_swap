@@ -6,7 +6,7 @@
 /*   By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 11:00:41 by sharrach          #+#    #+#             */
-/*   Updated: 2022/05/29 19:39:35 by sharrach         ###   ########.fr       */
+/*   Updated: 2022/06/04 14:16:09 by sharrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static char	**split_args(int argc, char **argv)
 
 	str = ft_strdup("");
 	i = 1;
-	while(i < argc)
+	while (i < argc)
 	{
 		str = ft_stradd(str, argv[i]);
 		str = ft_stradd(str, " ");

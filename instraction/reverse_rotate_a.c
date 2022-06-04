@@ -6,7 +6,7 @@
 /*   By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 18:34:39 by sharrach          #+#    #+#             */
-/*   Updated: 2022/06/03 16:51:53 by sharrach         ###   ########.fr       */
+/*   Updated: 2022/06/04 14:21:31 by sharrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	reverse_rotate_a(t_stacks *stacks)
 {
-	int tmp;
-	int i;
+	int	tmp;
+	int	i;
 
 	if (stacks->a.top < 1)
 		return ;

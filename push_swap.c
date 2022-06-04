@@ -6,7 +6,7 @@
 /*   By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 15:10:24 by sharrach          #+#    #+#             */
-/*   Updated: 2022/06/03 16:56:31 by sharrach         ###   ########.fr       */
+/*   Updated: 2022/06/04 14:19:04 by sharrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	which_sort(t_stacks *stacks)
 		sort_stacks(stacks);
 }
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	t_stacks	stacks;
 
@@ -46,9 +46,7 @@ int main(int argc, char **argv)
 		return (EXIT_FAILURE);
 	if (!get_args(argc, argv, &stacks))
 		return (ft_putendl_fd("Error\nInvalid arguments.", 1), 1);
-	// print_stacks(&stacks);
 	which_sort(&stacks);
-	// print_stacks(&stacks);
 	free(stacks.a.stack);
 	free(stacks.b.stack);
 	return (EXIT_SUCCESS);
