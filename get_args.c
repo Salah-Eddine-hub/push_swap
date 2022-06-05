@@ -6,7 +6,7 @@
 /*   By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 11:00:41 by sharrach          #+#    #+#             */
-/*   Updated: 2022/06/04 14:16:09 by sharrach         ###   ########.fr       */
+/*   Updated: 2022/06/05 16:12:57 by sharrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,17 +60,17 @@ int	get_args(int argc, char **argv, t_stacks *stacks)
 	char	**arr;
 
 	arr = split_args(argc, argv);
+	if (stacks->a.top == -1)
+		return (free_program(stacks), 0);
 	stacks->a.top = arr_len(arr) - 1;
 	stacks->a.stack = ft_calloc (sizeof(int), arr_len(arr));
 	stacks->b.top = -1;
 	stacks->b.stack = ft_calloc (sizeof(int), arr_len(arr));
-	argc -= 2;
+	argc = stacks->a.top;
 	i = 0;
 	while (i <= stacks->a.top)
 	{
-		if (arr[argc][0] == '\0' || !ft_satoi(arr[argc], &num))
-			return (free_program(stacks), 0);
-		if (check_error(stacks, num, i))
+		if (!ft_satoi(arr[argc], &num) || check_error(stacks, num, i))
 			return (free_program(stacks), 0);
 		stacks->a.stack[i++] = num;
 		argc --;

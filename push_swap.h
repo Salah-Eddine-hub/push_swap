@@ -6,7 +6,7 @@
 /*   By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 15:10:27 by sharrach          #+#    #+#             */
-/*   Updated: 2022/06/04 18:26:39 by sharrach         ###   ########.fr       */
+/*   Updated: 2022/06/05 17:56:37 by sharrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	reverse_rotate_a(t_stacks *stacks);
 void	reverse_rotate_b(t_stacks *stacks);
 void	rra_rrb(t_stacks *stacks);
 int		ft_satoi(const char *str, long *nb);
-int		is_sorted(t_stacks *stacks);
+int		ft_is_sorted(t_stacks *stacks);
 void	sort_three(t_stacks *stacks);
 void	sort_five(t_stacks *stacks);
 void	sort_hundred(t_stacks *stacks);

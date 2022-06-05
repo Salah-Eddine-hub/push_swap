@@ -6,7 +6,7 @@
 /*   By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 15:10:24 by sharrach          #+#    #+#             */
-/*   Updated: 2022/06/04 18:29:35 by sharrach         ###   ########.fr       */
+/*   Updated: 2022/06/05 15:15:17 by sharrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,10 @@ void	which_sort(t_stacks *stacks)
 		sort_three(stacks);
 	else if (stacks->a.top > 2 && stacks->a.top < 5)
 		sort_five(stacks);
-	else if(stacks->a.top > 4 && stacks->a.top <= 100)
+	else if (stacks->a.top > 4 && stacks->a.top <= 100)
 		sort_hundred(stacks);
 	else
 		sort_stacks(stacks);
-	
 }
 
 int	main(int argc, char **argv)
@@ -48,7 +47,7 @@ int	main(int argc, char **argv)
 	if (argc == 1)
 		return (EXIT_FAILURE);
 	if (!get_args(argc, argv, &stacks))
-		return (ft_putendl_fd("Error\nInvalid arguments.", 1), 1);
+		return (ft_putstr("Error\nInvalid arguments."), 1);
 	which_sort(&stacks);
 	free(stacks.a.stack);
 	free(stacks.b.stack);
