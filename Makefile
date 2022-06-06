@@ -6,7 +6,7 @@
 #    By: sharrach <sharrach@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/17 15:24:20 by sharrach          #+#    #+#              #
-#    Updated: 2022/06/05 19:57:22 by sharrach         ###   ########.fr        #
+#    Updated: 2022/06/06 15:48:26 by sharrach         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,6 +49,7 @@ BONUS_NAME	= checker
 BONUS_HEADER = bonus/checker.h bonus/getnextline/get_next_line.h
 
 BONUS_SRCS	= 	bonus/get_moves.c\
+				bonus/check_error.c\
 				bonus/moves_1.c\
 				bonus/moves_2.c\
 				bonus/moves_3.c\
