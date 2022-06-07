@@ -28,12 +28,12 @@ SRCS	=	instraction/swap_a.c\
 			sort_three.c\
 			sort_five.c\
 			ft_satoi.c\
+			free2d.c\
 			ft_stradd.c\
 			arr_len.c\
 			get_args.c\
 			move_index.c\
 			ft_putstr.c\
-			sort_hundred.c\
 			sort.c\
 			ft_is_sorted.c\
 			free_program.c\
@@ -61,6 +61,7 @@ BONUS_SRCS	= 	bonus/get_moves.c\
 				ft_smalest_num.c\
 				free_program.c\
 				ft_stradd.c\
+				free2d.c\
 				ft_satoi.c\
 				nb_index.c
 				

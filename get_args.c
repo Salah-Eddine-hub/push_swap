@@ -71,9 +71,10 @@ int	get_args(int argc, char **argv, t_stacks *stacks)
 	while (i <= stacks->a.top)
 	{
 		if (!ft_satoi(arr[argc], &num) || check_error(stacks, num, i))
-			return (free_program(stacks), 0);
+			return (free2d(arr), free_program(stacks), 0);
 		stacks->a.stack[i++] = num;
 		argc --;
 	}
+	free2d(arr);
 	return (1);
 }

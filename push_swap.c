@@ -33,9 +33,9 @@ void	which_sort(t_stacks *stacks)
 	else if (stacks->a.top > 2 && stacks->a.top < 5)
 		sort_five(stacks);
 	else if (stacks->a.top > 4 && stacks->a.top <= 100)
-		sort_hundred(stacks);
+		sort_stacks(stacks, 3);
 	else
-		sort_stacks(stacks);
+		sort_stacks(stacks, 5);
 }
 
 int	main(int argc, char **argv)
@@ -49,7 +49,6 @@ int	main(int argc, char **argv)
 	if (!get_args(argc, argv, &stacks))
 		return (ft_putstr("Error\nInvalid arguments."), 1);
 	which_sort(&stacks);
-	free(stacks.a.stack);
-	free(stacks.b.stack);
+	free_program(&stacks);
 	return (EXIT_SUCCESS);
 }

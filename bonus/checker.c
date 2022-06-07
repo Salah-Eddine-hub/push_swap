@@ -39,9 +39,9 @@ int main(int argc, char **argv)
 	if (get_moves(&stacks))
 	{
 		if (ft_is_sorted(&stacks) && stacks.b.top == -1)
-			ft_putendl_fd("OK", 1);
+			ft_putendl_fd("OK\n", 1);
 		else
-			ft_putendl_fd("KO", 1);
+			ft_putendl_fd("KO\n", 1);
 	}
 	free(stacks.a.stack);
 	free(stacks.b.stack);
